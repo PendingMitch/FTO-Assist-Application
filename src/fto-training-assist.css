@@ -1,0 +1,64 @@
+.main-container {
+  position: relative;
+  width: 60vw;
+  height: fit-content;
+}
+
+.main-container img {
+  width: 100%;
+  max-width: 500px;
+  
+}
+
+.helpful_links {
+  width: 30vw;
+  height: fit-content;
+  /* background: grey; */
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+
+  border-left: solid black 5px;
+}
+
+.helpful_links button {
+  border-radius: .5em;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  height: 100%;
+}
+
+.helpful_links a {
+  width: 50%;
+  height: 40px;
+  margin: 5px;
+}
+
+.continue_button {
+  position: absolute;
+  margin-top: 50px;
+  right: 0;
+}
+
+textarea  {
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#header img {
+  height: 100%;
+}
