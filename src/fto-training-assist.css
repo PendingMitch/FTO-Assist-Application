@@ -62,3 +62,12 @@ textarea  {
 #header img {
   height: 100%;
 }
+
+table, th, td {
+  border: 1px solid black;
+  padding: .5em;
+}
+
+input {
+  margin-bottom: 5px;
+}
