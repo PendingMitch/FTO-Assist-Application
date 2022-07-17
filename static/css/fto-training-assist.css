@@ -1,7 +1,11 @@
 * {
-  overflow-x: clip;
-  
+  overflow-x: clip; 
 }
+li {
+  overflow-x: visible;
+}
+
+
 
 body {
   width: 100vw;
