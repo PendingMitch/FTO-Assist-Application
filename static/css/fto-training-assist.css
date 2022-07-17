@@ -25,7 +25,7 @@ body {
   min-width: 560px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 870px) {
   .main-container {
     width: 90vw;
   }
@@ -65,10 +65,3 @@ input {
 
 
 
-
-
-@media only screen and (max-width: 750px) {
-  .helpful_links {
-    display: none;
-  }
-}

@@ -59,7 +59,7 @@
   z-index: 90;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 870px) {
   .helpful_links {
     display: none;
   }
