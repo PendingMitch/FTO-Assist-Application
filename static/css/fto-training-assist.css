@@ -1,11 +1,9 @@
 * {
-  overflow-x: clip; 
+  overflow-x: clip;
 }
 li {
   overflow-x: visible;
 }
-
-
 
 body {
   width: 100vw;
@@ -16,8 +14,6 @@ body {
   padding: 1em;
 }
 
-
-
 .main-container {
   position: relative;
   width: 60vw;
@@ -25,7 +21,7 @@ body {
   min-width: 560px;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 869px) {
   .main-container {
     width: 90vw;
   }
@@ -41,16 +37,13 @@ body {
   margin-top: 50px;
   margin-bottom: 10px;
   right: 0;
-  
+
   border: solid 1px black;
-  
 }
 
 textarea {
   width: 100%;
 }
-
-
 
 table,
 th,
@@ -62,6 +55,3 @@ td {
 input {
   margin-bottom: 5px;
 }
-
-
-
