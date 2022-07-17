@@ -21,7 +21,6 @@ continue_assist = (page) => {
   }
   disable_page_button(page);
   if (page == 6) {
-    
   }
 
   if (page == END_PAGE) {
@@ -34,6 +33,7 @@ continue_assist = (page) => {
 };
 
 function copyReport() {
+  let NONE_MSG = "None (N/A)";
   if (document.getElementById("concern_final").value == "") {
     document.getElementById("concern_final").value = "None (N/A)";
   }
@@ -45,23 +45,12 @@ function copyReport() {
     document.getElementById("Discord_final").value +
     "\n";
 
-  concern_0 = document.getElementById("concerns_0");
-  text = text + concern_0.getAttribute("head") + concern_0.value + "\n";
-
-  concern_1 = document.getElementById("concerns_1");
-  text = text + concern_1.getAttribute("head") + concern_1.value + "\n";
-
-  concern_2 = document.getElementById("concerns_2");
-  text = text + concern_2.getAttribute("head") + concern_2.value + "\n";
-
-  concern_3 = document.getElementById("concerns_3");
-  text = text + concern_3.getAttribute("head") + concern_3.value + "\n";
-
-  concern_4 = document.getElementById("concerns_4");
-  text = text + concern_4.getAttribute("head") + concern_4.value + "\n";
-
-  concern_5 = document.getElementById("concerns_5");
-  text = text + concern_5.getAttribute("head") + concern_5.value + "\n";
+  for (let i = 0; i <= END_PAGE; i++) {
+    let concerns = document.getElementById("concerns_" + i);
+    if (concerns.value != NONE_MSG) {
+      text = `${text}${concerns.getAttribute("head")}${concerns.value} \n`;
+    }
+  }
 
   concern_final = document.getElementById("concern_final");
   text = text + concern_final.getAttribute("head") + concern_final.value + "\n";
@@ -73,7 +62,5 @@ function copyReport() {
     "<b><u>COPIED TO CLIPBOARD</u></b> <br><br>" +
     text.replaceAll("\n", "<br>");
 }
-
-
 
 // hidepage(0, 6)
