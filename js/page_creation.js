@@ -1,4 +1,4 @@
-const END_PAGE = 6;
+const END_PAGE = 7;
 
 const OTHER_FILES = [
   "static/templates/header.html",
