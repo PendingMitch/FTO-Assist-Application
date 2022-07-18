@@ -2,6 +2,9 @@
 PendingMitch - FTO Assist Application
 See PendingMitch#2180
 
+### b0.7.1
+Styling and reorganisation of current content
+
 ### b0.7
 Content: Quality of life acordion drop downs
 Other CSS - Bootstrap
