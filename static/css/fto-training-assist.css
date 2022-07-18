@@ -2,31 +2,30 @@ html {
   overflow-y: scroll;
 }
 
+* {
+  text-align: center;
+}
+
 body {
   width: 100vw;
   max-width: 100vw;
   min-width: 750px;
-  position: relative;
+
   margin: 0;
-  padding: 1em;
+  padding: 0;
 }
 
-.main-container {
-  position: relative;
-  width: 60vw;
-  height: fit-content;
-  min-width: 560px;
+.container {
+  max-width: 700px;
 }
 
-@media only screen and (max-width: 869px) {
-  .main-container {
-    width: 90vw;
-  }
-}
 
-.main-container img {
+.container img {
   width: 100%;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .continue_button {
@@ -42,13 +41,18 @@ textarea {
   width: 100%;
 }
 
-table,
+/* table,
 th,
 td {
+  margin: auto;
   border: 1px solid black;
   padding: 0.2em;
-}
+} */
 
 input {
   margin-bottom: 5px;
+}
+
+img {
+  margin: auto;
 }

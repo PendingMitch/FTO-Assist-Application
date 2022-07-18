@@ -41,27 +41,15 @@ createLinkButton = (button_name, button_link, color) => {
   a_tag.target = "”_blank2_helpfullinks_" + button_name + "”";
 
   button = document.createElement("button");
-  button.classList.add(["btn", "btn-light"])
+  button.classList.add("btn")
+  button.classList.add("btn-info")
   
 
   button.innerHTML = button_name;
   a_tag.appendChild(button);
 
-  copy_icon_div = document.createElement("div")
-  copy_icon = document.createElement("img");
-  copy_icon.src = "static/images/copy_icon.svg";
-  copy_icon.classList.add("copy_icon");
-  copy_icon.addEventListener("click", () => {
-    navigator.clipboard.writeText(a_tag.href);
-  });
-  copy_icon_div.classList.add("copy_icon_div")
-  copy_icon_div.appendChild(copy_icon)
 
-  div = document.createElement("div");
-
-  div.appendChild(a_tag);
-  div.appendChild(copy_icon_div);
-  document.getElementById("helpful_links").appendChild(div);
+  document.getElementById("helpful_links").appendChild(a_tag);
 };
 
 LIST_OF_HELPBUTTONS.forEach((object) => {

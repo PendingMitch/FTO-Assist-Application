@@ -1,9 +1,6 @@
 const END_PAGE = 7;
 
 const OTHER_FILES = [
-  "static/templates/header.html",
-  "static/templates/helpful_links.html",
-
   "static/pages/page_final.html",
 ];
 
@@ -18,7 +15,7 @@ const CONCERNS = {
   7: "Traffic Management",
 }
 
-const SCRIPTS = ["js/help_buttons.js", "static/templates/helpful_links.js"];
+const SCRIPTS = ["js/help_buttons.js"];
 
 function readText(file) {
   var rawFile = new XMLHttpRequest();
@@ -38,7 +35,7 @@ function readText(file) {
 function addHTMLInBody(file) {
   let text = readText(file)
   if (text != undefined) {
-    document.body.innerHTML = `${document.body.innerHTML}\n\n ${text} `;
+    document.getElementById("content").innerHTML = `${document.getElementById("content").innerHTML}\n\n ${text} `
   }
 }
 
