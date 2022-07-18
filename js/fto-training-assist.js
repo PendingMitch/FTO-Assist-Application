@@ -15,14 +15,14 @@ disable_page_button = (page_number) => {
   textarea.disabled = true;
 };
 
-continue_assist = (page) => {
+continue_assist = (button) => {
+  let page = Number(button.parentElement.parentElement.id.replace("page_", ""))
+  
+
   if (isNaN(page) == true) {
     return;
   }
   disable_page_button(page);
-  if (page == 6) {
-  }
-
   if (page == END_PAGE) {
     hidepage(page, "final");
   } else {

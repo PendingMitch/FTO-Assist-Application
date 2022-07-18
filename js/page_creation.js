@@ -7,23 +7,39 @@ const OTHER_FILES = [
   "static/pages/page_final.html",
 ];
 
-const SCRIPTS = [
-  "js/help_buttons.js",
-  "static/templates/helpful_links.js",
-];
+const CONCERNS = {
+  0: "Initial",
+  1: "Discord",
+  2: "CAD",
+  3: "Uniform",
+  4: "Vehicle",
+  5: "Radio",
+  6: "10-11",
+  7: "Traffic Management",
+}
 
-function addHTMLInBody(file) {
+const SCRIPTS = ["js/help_buttons.js", "static/templates/helpful_links.js"];
+
+function readText(file) {
   var rawFile = new XMLHttpRequest();
+  let allText
   rawFile.open("GET", file, false);
   rawFile.onreadystatechange = function () {
     if (rawFile.readyState === 4) {
       if (rawFile.status === 200 || rawFile.status == 0) {
-        var allText = rawFile.responseText;
-        document.body.innerHTML = document.body.innerHTML + "\n\n" + allText;
+        allText = rawFile.responseText;
       }
     }
   };
   rawFile.send(null);
+  return allText;
+}
+
+function addHTMLInBody(file) {
+  let text = readText(file)
+  if (text != undefined) {
+    document.body.innerHTML = `${document.body.innerHTML}\n\n ${text} `;
+  }
 }
 
 SCRIPTS.forEach((value) => {
@@ -43,6 +59,18 @@ OTHER_FILES.forEach((file) => {
 for (let i = 0; i <= END_PAGE; i++) {
   let page = `static/pages/page_${i}.html`;
 
+  let text = readText(page);
   addHTMLInBody(page);
-  console.log({ type: "Loaded page", page });
+
+
+
+  // CONCERNS
+  let concerns = readText('static/templates/concerns.html')
+
+
+  document.getElementById("page_" + i).innerHTML = `${document.getElementById("page_" + i).innerHTML} \n\n ${concerns}`
+  document.getElementById("concerns_").id = `concerns_${i}`
+  document.getElementById("concerns_" + i).setAttribute("head", CONCERNS[Number(i)])
+  document.getElementById("continue_").id = `continue_${i}`
+
 }

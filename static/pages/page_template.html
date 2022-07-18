@@ -2,11 +2,20 @@
 <div id="page_PAGEID" class="main-container" style="display: none">
   <h1>New Page</h1>
 
-  <!-- CONCERNS -->
-  <div>
-    <textarea head="PAGECONTENT Concerns: " name="concerns_PAGEID" id="concerns_PAGEID" cols="30" rows="2" placeholder="Comments / Concerns"></textarea>
-    <button onclick="continue_assist(PAGEID)" class="continue_button" id="continue_PAGEID">
-      Continue
+  <div class="accordion accordion-flush" id="accordionPAGE_NAME1">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingPAGE_NAMEnumber">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePAGE_NAMEnumber" aria-expanded="false" aria-controls="flush-collapsePAGE_NAMEnumber">
+          TITLE
+        </button>
+      </h2>
+      <div id="flush-collapsePAGE_NAMEnumber" class="accordion-collapse collapse" aria-labelledby="flush-headingPAGE_NAMEnumber" data-bs-parent="#accordionPAGE_NAME1">
+        <div class="accordion-body">
+          CONTENT
+        </div>
+      </div>
+    </div>
+    
   </div>
   <br>
 </div>

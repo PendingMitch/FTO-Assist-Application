@@ -1,12 +1,5 @@
-* {
-  overflow-x: clip;
-}
 html {
   overflow-y: scroll;
-}
-
-li {
-  overflow-x: visible;
 }
 
 body {

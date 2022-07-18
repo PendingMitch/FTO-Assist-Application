@@ -24,7 +24,7 @@ const LIST_OF_HELPBUTTONS = [
     color: PINK,
   },
   {
-    title: "Standard Operations Procedure",
+    title: "SAHP SOP",
     link: "https://docs.google.com/document/d/15d2zlnKADKGstx3h-WUK5uEhLpz0HPSURWoYmyaKb2M/edit",
     color: GREEN,
   },
@@ -41,8 +41,8 @@ createLinkButton = (button_name, button_link, color) => {
   a_tag.target = "”_blank2_helpfullinks_" + button_name + "”";
 
   button = document.createElement("button");
-  button.style.backgroundColor = color;
-  button.style.color = "black";
+  button.classList.add(["btn", "btn-light"])
+  
 
   button.innerHTML = button_name;
   a_tag.appendChild(button);
@@ -58,6 +58,7 @@ createLinkButton = (button_name, button_link, color) => {
   copy_icon_div.appendChild(copy_icon)
 
   div = document.createElement("div");
+
   div.appendChild(a_tag);
   div.appendChild(copy_icon_div);
   document.getElementById("helpful_links").appendChild(div);
